@@ -1,7 +1,9 @@
 .title{
+    font-size: 30px;
     color: white !important;
 }
 .row{
+    margin-top: 30px !important;
     margin-left: 20px;
     color: white;
 } 
@@ -26,5 +28,13 @@
     transition: .4s all;
 }
 
+.smallPoster{
+    max-height: 120px;
+    margin-right: 10px;
+    transition: .3s all;
+}
 
-
+.smallPoster:hover{
+    transform: scale(1.1);
+    transition: .4s all;
+}

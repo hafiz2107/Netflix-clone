@@ -1,22 +1,28 @@
-import React from 'react'
+import React , {useEffect , useState} from 'react'
 import './Post.css'
-function Post() {
+import axios from '../../axios'
+import {imageUrl} from '../../Constants/Constants'
+
+
+function Post({urls , title ,isSmall}) {
+    const [poster , setPoster] = useState([])
+
+    useEffect(()=>{
+        axios.get(urls).then((response)=>{
+            setPoster(response.data.results)
+        })
+    },[])
+    
+
     return (
         <div className='row'>
-            <h2 className='title'>Drama</h2>
+            <h2 className='title'>{title}</h2>
             <div className='posters'>
-                <img className='poster' src="https://occ-0-4994-2186.1.nflxso.net/dnm/api/v6/X194eJsgWBDE2aQbaNdmCXGUP-Y/AAAABX5i4axeAen_IWcxSOMjSR97fyrw6lHc-BAhrW7LYTdR0teOTvC-h7QAzZTfOUzBFJrTenr331oao9VyQw-D0oAL4I1bolhGvPT1urtAzddPQbmK9pkyh7HAdynBcw.jpg?r=dba" alt="Poster" />
-                <img className='poster' src="https://occ-0-4994-2186.1.nflxso.net/dnm/api/v6/X194eJsgWBDE2aQbaNdmCXGUP-Y/AAAABX5i4axeAen_IWcxSOMjSR97fyrw6lHc-BAhrW7LYTdR0teOTvC-h7QAzZTfOUzBFJrTenr331oao9VyQw-D0oAL4I1bolhGvPT1urtAzddPQbmK9pkyh7HAdynBcw.jpg?r=dba" alt="Poster" />
-                <img className='poster' src="https://occ-0-4994-2186.1.nflxso.net/dnm/api/v6/X194eJsgWBDE2aQbaNdmCXGUP-Y/AAAABX5i4axeAen_IWcxSOMjSR97fyrw6lHc-BAhrW7LYTdR0teOTvC-h7QAzZTfOUzBFJrTenr331oao9VyQw-D0oAL4I1bolhGvPT1urtAzddPQbmK9pkyh7HAdynBcw.jpg?r=dba" alt="Poster" />
-                <img className='poster' src="https://occ-0-4994-2186.1.nflxso.net/dnm/api/v6/X194eJsgWBDE2aQbaNdmCXGUP-Y/AAAABX5i4axeAen_IWcxSOMjSR97fyrw6lHc-BAhrW7LYTdR0teOTvC-h7QAzZTfOUzBFJrTenr331oao9VyQw-D0oAL4I1bolhGvPT1urtAzddPQbmK9pkyh7HAdynBcw.jpg?r=dba" alt="Poster" />
-                <img className='poster' src="https://occ-0-4994-2186.1.nflxso.net/dnm/api/v6/X194eJsgWBDE2aQbaNdmCXGUP-Y/AAAABX5i4axeAen_IWcxSOMjSR97fyrw6lHc-BAhrW7LYTdR0teOTvC-h7QAzZTfOUzBFJrTenr331oao9VyQw-D0oAL4I1bolhGvPT1urtAzddPQbmK9pkyh7HAdynBcw.jpg?r=dba" alt="Poster" />
-                <img className='poster' src="https://occ-0-4994-2186.1.nflxso.net/dnm/api/v6/X194eJsgWBDE2aQbaNdmCXGUP-Y/AAAABX5i4axeAen_IWcxSOMjSR97fyrw6lHc-BAhrW7LYTdR0teOTvC-h7QAzZTfOUzBFJrTenr331oao9VyQw-D0oAL4I1bolhGvPT1urtAzddPQbmK9pkyh7HAdynBcw.jpg?r=dba" alt="Poster" />
-                <img className='poster' src="https://occ-0-4994-2186.1.nflxso.net/dnm/api/v6/X194eJsgWBDE2aQbaNdmCXGUP-Y/AAAABX5i4axeAen_IWcxSOMjSR97fyrw6lHc-BAhrW7LYTdR0teOTvC-h7QAzZTfOUzBFJrTenr331oao9VyQw-D0oAL4I1bolhGvPT1urtAzddPQbmK9pkyh7HAdynBcw.jpg?r=dba" alt="Poster" />
-                <img className='poster' src="https://occ-0-4994-2186.1.nflxso.net/dnm/api/v6/X194eJsgWBDE2aQbaNdmCXGUP-Y/AAAABX5i4axeAen_IWcxSOMjSR97fyrw6lHc-BAhrW7LYTdR0teOTvC-h7QAzZTfOUzBFJrTenr331oao9VyQw-D0oAL4I1bolhGvPT1urtAzddPQbmK9pkyh7HAdynBcw.jpg?r=dba" alt="Poster" />
-                <img className='poster' src="https://occ-0-4994-2186.1.nflxso.net/dnm/api/v6/X194eJsgWBDE2aQbaNdmCXGUP-Y/AAAABX5i4axeAen_IWcxSOMjSR97fyrw6lHc-BAhrW7LYTdR0teOTvC-h7QAzZTfOUzBFJrTenr331oao9VyQw-D0oAL4I1bolhGvPT1urtAzddPQbmK9pkyh7HAdynBcw.jpg?r=dba" alt="Poster" />
-                <img className='poster' src="https://occ-0-4994-2186.1.nflxso.net/dnm/api/v6/X194eJsgWBDE2aQbaNdmCXGUP-Y/AAAABX5i4axeAen_IWcxSOMjSR97fyrw6lHc-BAhrW7LYTdR0teOTvC-h7QAzZTfOUzBFJrTenr331oao9VyQw-D0oAL4I1bolhGvPT1urtAzddPQbmK9pkyh7HAdynBcw.jpg?r=dba" alt="Poster" />
-                <img className='poster' src="https://occ-0-4994-2186.1.nflxso.net/dnm/api/v6/X194eJsgWBDE2aQbaNdmCXGUP-Y/AAAABX5i4axeAen_IWcxSOMjSR97fyrw6lHc-BAhrW7LYTdR0teOTvC-h7QAzZTfOUzBFJrTenr331oao9VyQw-D0oAL4I1bolhGvPT1urtAzddPQbmK9pkyh7HAdynBcw.jpg?r=dba" alt="Poster" />
-                
+                {
+                    poster.map((eachPoster,index)=>
+                        <img className={`${isSmall ? 'smallPoster' : 'poster'}`} key={index} src={`${imageUrl+eachPoster.backdrop_path}`} alt="Poster" />
+                    )
+                }
             </div>
         </div>
     )
