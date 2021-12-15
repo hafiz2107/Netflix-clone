@@ -1,0 +1,71 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@200&display=swap');
+
+.banner{
+    background-image: url('https://occ-0-4994-2186.1.nflxso.net/dnm/api/v6/6AYY37jfdO6hpXcMjf9Yu5cnmO0/AAAABSoEEFwl0i4fmFQmSDQOZ_OrshmrVV7tbLEw9X7mLRBtmyyJ5Hkw1Fda2WG-AqIBQ6hEF4sqUEnT_VLeBCpVRcAhiwm-.jpg?r=a42');
+    background-size: cover;
+    height: 600px;
+    color: rgb(255, 255, 255);
+}
+
+.content{
+    padding-left:  30px;
+    padding-top: 140px;
+    height: 190px;
+}
+
+.title{
+    padding-left: 30px;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 3rem;
+    font-weight: 800;
+} 
+.banner-buttons{
+    padding-left: 30px;
+}
+
+
+.button{
+    padding: 30px;
+    color: white;
+    outline: none;
+    border: none;
+    border-radius: 5px;
+    font-weight: 700;
+    padding-left: 2rem;
+    padding-right: 2rem;
+    padding-top: 0.5rem;
+    padding-bottom: 0.5rem;
+    background-color: rgba(124, 124, 124, 0.308);
+    cursor: pointer;
+    margin-right: 1rem;
+}
+
+.button:hover{
+    transform: scale(1.2);
+    transition: .3s all;
+    background-color: #e6e6e648;
+}
+
+.button:not(:hover){
+    transition: .3s all;
+}
+.description{
+    padding-left: 30px;
+    margin-top: 8px;
+    width: 20rem;
+    max-width: 360px;
+}
+
+.description-body{
+    line-height: 1.5;
+    padding-top: 1rem;
+    font-size: 0.7rem;
+    height: 80px;
+    color: rgb(255, 255, 255);
+}
+
+.fade{
+    margin-top: 0px;
+    height: 17.4rem;
+    background-image: linear-gradient(180deg , transparent ,rgb(0, 0, 0));
+}

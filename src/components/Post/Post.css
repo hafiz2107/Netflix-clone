@@ -1,0 +1,30 @@
+.title{
+    color: white !important;
+}
+.row{
+    margin-left: 20px;
+    color: white;
+} 
+.posters{
+    display: flex;
+    padding: 30px;
+    overflow-x: scroll;
+}
+
+.posters::-webkit-scrollbar{
+    display: none;
+}
+
+.poster{
+    max-height: 160px;
+    margin-right: 10px;
+    transition: .3s all;
+}
+
+.poster:hover{
+    transform: scale(1.1);
+    transition: .4s all;
+}
+
+
+
